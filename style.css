@@ -853,11 +853,20 @@ section h2 {
 
 /* mobile overlay */
 @media (max-width: 760px) {
+  #body-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
   .overlay-inner {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     overflow-y: auto;
     max-height: 90vh;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    background: var(--deep-blue);
+    padding: 2rem 1.5rem;
+    pointer-events: all;
   }
   .overlay-image img {
     max-height: 260px;
