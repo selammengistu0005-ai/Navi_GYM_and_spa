@@ -380,6 +380,7 @@ function initBodyTypeOverlay() {
     });
   });
 
+  
   /* close on outside click */
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) {
@@ -387,6 +388,15 @@ function initBodyTypeOverlay() {
       overlay.setAttribute('aria-hidden', 'true');
     }
   });
+
+  /* close on X button click */
+  const closeBtn = document.getElementById('overlay-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('aria-hidden', 'true');
+    });
+  }
 }
 
 /* ============================================================
