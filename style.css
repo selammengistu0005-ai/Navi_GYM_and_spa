@@ -677,6 +677,11 @@ section h2 {
   max-height: 80vh;
   overflow-y: auto;
   padding-right: 0.5rem;
+  scrollbar-width: none;
+}
+
+.overlay-content::-webkit-scrollbar {
+  display: none;
 }
 
 .overlay-why {
@@ -748,7 +753,7 @@ section h2 {
 .overlay-dont-label { color: #e53935; }
 
 .overlay-close {
-  display: none;
+  display: flex;
   position: absolute;
   top: 1rem;
   right: 1rem;
